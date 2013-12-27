@@ -13,6 +13,7 @@ public class UserServiceImpl implements UserService {
     public boolean createNewUser(User user) {
         System.out.println("createNewUser() new user = " + user);
 
+        user.setId(TwitterFactory.getGeneratedUserId());
         TwitterFactory.getUserList().add(user);
 
         System.out.println("new user created successfully");
