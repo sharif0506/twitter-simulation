@@ -11,12 +11,12 @@ import java.util.List;
  * Created by Bazlur Rahman Rokon on 12/28/13.
  */
 public class UserServiceImplTest {
-    private UserService userService;
+    private static final String FIRST_NAME = "Bazlur";
+    private static final String LAST_NAME = "Rahman";
+    private static final String EMAIL_ADDRESS = "anm_brr@yahoo.com";
+    private static final String PASSWORD = "HXJD^%DAS";
 
-    private String FIRST_NAME = "Bazlur";
-    private String LAST_NAME = "Rahman";
-    private String EMAIL_ADDRESS = "anm_brr@yahoo.com";
-    private String PASSEORD = "HXJD^%DAS";
+    private UserService userService;
 
     @Before
     public void setUp() throws Exception {
@@ -30,7 +30,7 @@ public class UserServiceImplTest {
         user.setFirstName(FIRST_NAME);
         user.setLastName(LAST_NAME);
         user.setEmailAddress(EMAIL_ADDRESS);
-        user.setPassword(PASSEORD);
+        user.setPassword(PASSWORD);
         boolean userCreated = userService.createNewUser(user);
         Assert.assertEquals(true, userCreated);
     }

@@ -34,6 +34,7 @@ public class TweetServiceImpl implements TweetService {
         System.out.println("findAllTweet() by " + user.getNaturalName());
 
         List<Tweet> tweets = TwitterFactory.getTweetList();
+
         for (Tweet tweet : tweets) {
             if (!tweet.getTweetBy().equals(user)) {
                 tweets.remove(tweet);
